@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petlover</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+   <style>
+       * {margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Roboto', sans-serif;
+outline: none;
+border: none;
+text-decoration: none;
+transition: all 0.2s linear;
+
+}
+:root{
+--orange:#FFA500;
+--black:#130f40;
+--light-color:#666;
+--box-shadow:0.5rem 1rem rgba(0,0,0,1);
+--border: .2rem solid rgba(0,0,0,1);
+--outline: .1rem solid rgba(0,0,0,1);
+--outline-hover: .2rem solid rgba(0,0,0,1);
+}
+html{
+font-size: 62.5%;
+overflow-x: hidden;
+scroll-behavior: smooth;
+scroll-padding-top: 7rem;
+}
+.btn{
+margin-top: 1rem;
+display: inline-block;
+padding: .8rem 1.5rem;
+font-size: 1.7rem;
+border-radius: .5rem;
+background: none;
+border: .2rem solid var(--black);
+color:black;
+background: green;
+cursor: pointer;
+}
+.btn_About{
+    
+        margin-top: 1rem;
+        display: inline-block;
+        padding: .8rem 1.5rem;
+        font-size: 1.7rem;
+        border-radius: .5rem;
+        background: none;
+        border: .2rem solid var(--black);
+        color:black;
+        background: green;
+        cursor: pointer;
+        
+}
+.btn_About:hover{
+    background: yellowgreen;
+    color: #fff;
+    }
+.btn:hover{
+background: yellowgreen;
+color: #fff;
+}
+.header{
+position: fixed;
+top: 0; left: 0; right: 0;
+z-index: 1000;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 2rem 9%;
+background-color: #fff;
+box-sizing: var(--box-shadow);
+}
+.logo span{
+    color: #130f40;
+}
+.header .logo{
+font-size: 2.5rem;
+font-weight: bolder;
+color: green
+}
+.header .logo i{
+color:greenyellow;
+}
+.header .navbar a{
+font-size: 1.7rem;
+margin: 0 1rem;
+color: green;
+}
+.header .navbar a:hover{
+color: yellowgreen;
+}
+.header .icons div{
+height: 4.5rem;
+width: 4.5rem;
+line-height: 4.5rem;
+border-radius: .5rem;
+background: #eee;
+color: green;
+font-size: 2rem;
+margin-right: .3rem;
+text-align: center;
+}
+.header .icons div:hover{
+background: yellowgreen;
+color: #fff;
+}
+#menu-btn{
+display: none;
+}
+.search-form{
+position: absolute;
+top: 110%; right: -110%;
+width: 50rem;
+height: 4rem;
+background: #fff;
+
+overflow: hidden;
+display: flex;
+align-items: center;
+
+
+}
+.search-form.active{
+right: 2rem;
+transition: .4s linear;
+}
+.header .search-form input{
+height: 100%;
+width: 100%;
+background: none;
+text-transform: none;
+font-size: 1.6rem;
+color: var(--black);
+padding: 0 1.5rem;
+}
+.header .search-form label{
+font-size: 2.2rem;
+padding-right: 1.5rem;
+color: var(--black);
+cursor: pointer;
+}
+.header .search-form label:hover{
+color: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(banner.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 39rem;
+    padding-bottom: 10rem;
+}
+.home .content{
+    text-align: center;
+    width: 60rem;
+
+}
+.home .content h3{
+    color: yellowgreen;
+    font-size: 3.5rem;
+
+}
+.home .content h1{
+    color: green;
+    font-size: 3.5rem;
+
+}
+
+.home .content p{
+   color: white;
+   font-size: 2rem;
+    padding: 1rem 0;
+
+
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+
+}
+ .main.main-center{
+     width:50%
+ }
+.main .main-center img{
+    width: 75%;
+    padding-top: 9rem;
+    padding-left: 15rem;
+}
+.main .main-para{
+    width:30%;
+    padding-right: 23rem;
+    margin-right: 12rem;
+    
+   
+}
+.main .main-para h3{
+  padding-top: 10rem;
+
+  font-size: 2.5rem;
+  color: greenyellow;
+
+}
+.main .main-para h1{
+    padding-top: 3rem;
+   
+ font-size: 2.8rem;
+ width: 150%;
+    
+ 
+}
+.main .main-para p{
+    font-size: 1.5rem;
+    padding-top: 2rem;
+   
+    width: 230%;
+    color: green;
+}
+.heading h3{
+    text-align: center;
+    padding-top: 10rem;
+    font-size: 3rem;
+    color: greenyellow;
+}
+.heading h1{
+    text-align: center;
+    padding-top: 3rem;
+    font-size: 3rem;
+}
+
+.service_box{
+    display: flex;
+    padding-top: 5rem;
+  margin: 5rem;
+}
+.service_box .box1{
+    
+
+    padding:3rem;
+    background-color: rgb(191, 250, 191);
+    margin: 4px 6px;
+    border-radius: 8px;
+    
+
+   
+    
+}
+.service_box .box1 h2{
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 2rem;
+color: rgb(96, 156, 6);
+
+
+    padding-bottom: 2rem;
+}
+.service_box .box1 p{
+    font-size: 1.5rem;
+    text-align: center;
+    color: rgb(100, 184, 100);
+}
+
+.petimg img{
+    height: 10rem;
+    width:60%;
+    margin: auto;
+    display: block;
+   
+
+}
+/* ourteam*/
+
+.teamimg img{
+    height: 17rem;
+    width:95%;
+    margin: auto;
+    display: block;
+   
+
+}
+.teamimg img:hover{
+    transform: scale(1.3);
+}
+
+.team_box{
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;   
+}
+
+.team_box .box2{
+    padding:3rem;
+    background-color:whitesmoke;
+    margin: 4px 20px;
+    border-radius: 8px;
+    
+}
+.team_box .box2 h2{
+    text-align: center;
+    font-size: 2rem;
+    padding-top:2.3rem;
+}
+.team_box .box2 h4{
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: .6rem;
+    color: greenyellow;
+}
+.box2 .icon{
+    text-align: center;
+    font-size: 2.8rem;
+  
+    margin-top: 1rem;
+}
+.fa-facebook-square{
+    color: blue;
+    
+}
+.fa-instagram{
+    color: maroon;
+    padding-left: 2rem;
+}
+.fa-twitter-square{
+    color: lightblue;
+    padding-left: 2rem;
+  
+    
+}
+/*check img section*/
+.main2{
+    display: flex;
+    justify-content: space-between;
+    background: whitesmoke;
+
+  
+}
+.main2 .main-center2{
+    width:50%
+}
+.main2 .main-center2 img{
+    width: 100%;
+    padding-top: 9rem;
+    padding-left: 10rem;
+}
+.main2 .main-para2{
+    width:30%;
+    padding-right: 23rem;
+    margin-right: 12rem;
+    
+   
+}
+.main2 .main-para2 h3{
+    padding-top: 18rem;
+  
+    font-size: 2rem;
+    color: greenyellow;
+  
+  }
+  .main2 .main-para2 h1{
+    padding-top: 3rem;
+   
+ font-size: 2.8rem;
+ width: 150%;
+    
+  }
+  .main2 .main-para2 p{
+    font-size: 1.5rem;
+    padding-top: 2rem;
+   
+    width: 230%;
+    color: green;
+}
+.class h1{
+    font-size: 1rem;
+    padding-top: 1.5rem;
+margin-left: 4rem;
+padding-bottom: 1rem;
+color: greenyellow;
+}
+.class a{
+    color: green;
+    font-size: 1.2rem;
+  
+   
+}
+/*Pricing plan*/
+.main-box{
+    display: flex;
+}
+
+.planbox .pricingimg img{
+    height: 17rem;
+    width:95%;
+    margin: auto;
+    display: block;
+    
+}
+.pricingimg img:hover{
+    transform: scale(0.8);
+}
+
+.main-box{
+    
+        display: flex;
+        justify-content: center;
+        padding-top: 3rem;   
+    
+}
+.planbox{
+    padding:3rem;
+    background-color:whitesmoke;
+    margin: 4px 20px;
+    border-radius: 8px;
+}
+.planbox h2{
+    color: green;
+    text-align: center;
+    font-size: 2rem;
+    padding-top:2.3rem;
+}
+.planbox span{
+    color: black;
+}
+hr{
+    width: 20px;
+    height: 2px;
+    color: black;
+}
+.circle{
+    display:block;
+    font-size: 1.5rem;
+   color: green;
+   padding-top: 2rem;
+   padding-left: 5.2rem;
+  
+}
+.circle span{
+ padding-left: 1rem;
+    font-size:1.6rem;
+}
+.fa-close{
+    color: red;
+}
+.btn_circle{
+    margin-top: 2rem;
+display: inline-block;
+margin-left: 4rem;
+padding: .4rem .8rem;
+font-weight: bold;
+font-size: 1.5rem;
+border-radius: .5rem;
+background: none;
+border: .2rem solid var(--black);
+color:white;
+background: green;
+cursor: pointer;
+}
+.btn_circle:hover{
+    background-color: greenyellow;
+    color: #fff;
+}
+.btn_circle_pink{
+    margin-top: 2rem;
+    display: inline-block;
+    margin-left: 4rem;
+    padding: .4rem .8rem;
+    font-size: 1.5rem;
+    border-radius: .8rem;
+    background: none;
+    border: .2rem solid var(--black);
+    color:white;
+    background:rgb(152, 34, 54);
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn_circle_pink:hover{
+    background-color: greenyellow;
+    color: #fff;
+}
+/*lasting*/
+.lastimg img{
+    height: 17rem;
+    width:95%;
+    margin: auto;
+    display: block;
+    
+    
+}
+.last_box{
+    
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;   
+
+}
+.last{
+    padding:3rem;
+    background-color:whitesmoke;
+    margin: 4px 20px;
+    border-radius: 8px;
+}
+.lastico{
+    padding-top: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: green;
+}
+.lastico span{
+    font-size: 1.2rem;
+}
+.lastpara h1{
+font-size: 1.5rem;
+width: 50%;
+padding-top: 3rem;
+margin-left: 3rem;
+}
+/* Contact */
+.contact{
+    background-color: #130f40;
+}
+.f-contact{
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3em;
+    padding-bottom: 15rem;
+    
+}
+.f-contact>div{
+    flex-basis: 20%;
+}
+.f-contact h3{
+    padding: 20px;
+    padding-top: 8rem;
+    font-size: 2.5rem;
+
+
+}
+hr{
+    color: #666;
+}
+.f-contact p{
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding-left: 3rem;
+    color: #666;
+}
+.su{
+    padding-top: 3.5rem;
+}
+.ex{
+padding-top: 2.8rem;
+}
+.sup{
+    padding-top: 2.8rem;
+}
+
+
+.fa-facebook{
+color:blue;
+font-size: 2rem;
+padding-top: 2rem;
+padding-right: 1rem;
+padding-left: 2rem;
+
+
+
+}
+
+.fa-linkedin{
+color: white;
+font-size: 2rem;
+padding-top: 2rem;
+padding-right: 1rem;
+
+}
+.fa-twitter{
+    color: lightblue;
+    font-size: 2rem;
+padding-top: 2rem;
+padding-right: 1rem;
+}
+.fa-youtube{
+    color: red;
+    font-size: 2rem;
+    padding-top: 2rem;
+    padding-right: 1rem;
+}
+.social{
+    display: grid;
+    font-size: 1.5rem;
+    
+}
+.fa-link{
+    padding-left: 3rem;
+    padding-bottom: 1rem;
+    cursor: pointer;
+    color: #666;
+}
+.social span{
+    padding-left: 1rem;
+    cursor: pointer;
+}
+.in{
+    width: 80%;
+    height: 2.4rem;
+    font-size: 1rem;
+    border-radius: .8rem;
+padding-left: 2rem;
+ margin-top: 2rem;
+ color: #666;
+ margin-left: 2.4rem;
+}
+footer{
+    text-align: center;
+    color: #666;
+    font-size: 2rem;
+    background: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+        
+        
+    }
+
+    .header{
+        padding: 0rem;
+        padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    }
+    section{
+        padding: 2rem;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+
+  
+    .main .main-para {
+        width: 42%;
+     
+        margin:auto;
+    }
+    .main2{
+        display: flex;
+        flex-direction: column;
+    }
+    .main2 .main-para2{
+        width: 46%;
+        padding-bottom: 5rem;
+ 
+        margin:auto;
+    }
+    .circle{
+        padding-left:1rem;
+     
+        
+    }
+    .fa-check-circle{
+        padding-bottom: 1rem;
+    }
+    .fa-close{
+      padding-bottom: 1rem;
+    }
+    .box2 .icon {
+        text-align: center;
+        font-size: 1.4rem;
+        margin-top: 1rem;
+    }
+    .main2 .main-center2 img{
+        margin-left: 5rem;
+        width: 143%;
+    }
+
+}
+@media(max-width:768px){
+ html{
+     overflow-x: hidden;
+ }
+ #menu-btn{
+    display: inline-block;
+}
+
+ .main{display: flex;
+ flex-direction: column;}
+
+   .header .navbar{
+       position: absolute;
+       top: 110%; right: -110%;
+       width: 30rem;
+       box-shadow: var(--box-shadow);
+       border-radius: .5rem;
+       background: #fff;
+   }
+   .header .search-form{
+    width: 90%;
+}
+   .header .navbar.active{
+       right: 2rem;
+       transition: .4s linear;
+   }
+
+   .header .navbar a{
+       font-size: 2rem;
+       margin: 2rem 2.5rem;
+       display: block;
+       text-align: center;
+   }
+ 
+
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    overflow-x: hidden;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .main{display: flex;
+        flex-direction: column;}
+
+    }
+    .header{
+        padding-top: 1rem;
+        padding: 1.2rem 2rem;
+    }
+    .main .main-center img{
+        width: 100%;
+        padding-top: 9rem;
+        padding-left:0rem;
+       
+    }
+
+    .main .main-para h3{
+        color: greenyellow;
+        padding-left: 8rem;
+      
+       
+      }
+      .circle{
+          padding-left:1rem;
+       
+          
+      }
+      .fa-check-circle{
+          padding-bottom: 1rem;
+      }
+      .fa-close{
+        padding-bottom: 1rem;
+      }
+  .btn_About{
+    margin-left: 7rem;
+    margin-top: 3rem;
+  }
+      .main .main-para h1{
+        padding-top: 3rem;
+        width: 26rem;
+        margin-left: 2rem;
+    }
+    .main .main-para p{
+        
+        padding-top: 2rem;
+        padding-left: 1rem;
+        margin-left: -2rem;
+        width: 30rem;
+        
+        color: green;
+    }
+    .service_box{
+        flex-direction: column;
+    }
+    .heading{
+        padding-top:1rem;
+    }
+    .box1 img{
+        height:6rem;
+    }
+    .team_box{
+flex-direction: column;
+margin: auto;
+    }
+    /*Our*/
+    .main2{
+        flex-direction: column;
+    }
+    .main2 .main-center2 img{
+        width: 143%;
+        padding-top: 9rem;
+        padding-left:0rem;
+       
+    }
+    .main2 .main-para2 h3{
+        padding-left: 9rem;
+        padding-top: 3rem;
+    }
+    .main2 .main-para2 h1{
+        padding-top: 3rem;
+        width: 26rem;
+        margin-left: 2rem;
+    }
+    .main2 .main-para2 p{
+        
+        padding-top: 2rem;
+        padding-left: 1rem;
+        margin-left: -2rem;
+        width: 30rem;
+        
+        color: green;
+    }
+    .class h4{
+     
+        margin-left: 12rem;
+    }
+    .box2 .icon {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-top: 1rem;
+    }
+    .class a{
+       font-size: 1.2rem;
+    
+    }
+    .main-box{
+        flex-direction: column;
+    }
+.f-contact{
+    flex-direction: column;
+}
+
+
+
+  
+
+}
+   </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo"><i class="fa fa-paw"></i>Pet<span>L</span>over</a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#About Us">About Us</a>
+            <a href="#Services">Services</a>
+            <a href="#Our Team">Our Team</a>
+            <a href="#Reviews">Reviews</a>
+            <a href="#Pricing">Pricing Plan</a>
+            <a href="#Contact">Contact</a>
+        </nav>
+        <div class="icons">
+            <div class="fa fa-bars" id="menu-btn"></div>
+            <div class="fa fa-search" id="search-btn"></div>
+            <div class="fa fa-shopping-cart" id="cart-btn"></div>
+
+        </div>
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fa fa-search"></label>
+        </form>
+
+
+
+    </header>
+    <section class="home" id="home">
+        <div class="content">
+            <h3>We Enjoy providing</h3>
+            <h1>We're Ready To Keep your pet</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, mollitia? Voluptates nobis
+                reprehenderit ab architecto delectus?</p>
+            <a href="#" class="btn">Contact Now</a>
+        </div>
+
+    </section>
+
+    <section class="about" id="About Us">
+        <div class="main">
+            <div class="main-center">
+                <img src="about-image.png" alt="">
+            </div>
+            <div class="main-para">
+                <h3>About Us</h3>
+                <h1>We are best for your pet care</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nesciunt sapiente quis aut laborum
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia accusantium obcaecati ad, aliquam
+                    dolores voluptate, eum doloribus esse quae iste perferendis corrupti maiores itaque? Ratione vitae
+                    porro perspiciatis obcaecati accusamus ad nesciunt tempora fugiat reiciendis suscipit neque
+                    perferendis, nostrum vel.</p>
+                <a href="#" class="btn_About">Discover More</a>
+            </div>
+
+        </div>
+    </section>
+    <section class="services" id="Services">
+        <div class="heading">
+            <h3>Services</h3>
+            <h1>We Provide Services</h1>
+
+        </div>
+        <div class="service_box">
+            <div class="box1">
+                <div class="petimg">
+                    <img src="dog.jpg" alt="">
+                    <h2>Dog Boarding</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nostrum eos aliquid quis?</p>
+                </div>
+            </div>
+            <div class="box1">
+                <div class="petimg">
+                    <img src="cat.jfif" alt="">
+                    <h2>Cat Boarding</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nostrum eos aliquid quis?</p>
+                </div>
+            </div>
+            <div class="box1">
+                <div class="petimg">
+                    <img src="healthy.jpg" alt="">
+                    <h2>Healthy Boarding</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nostrum eos aliquid quis?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Our Team">
+        <div class="heading">
+            <h3>Exprt Team</h3>
+            <h1>Meet the Exprt Team</h1>
+
+        </div>
+        <div class="team_box">
+            <div class="box2">
+                <div class="teamimg">
+                    <img src="member1.jpg" alt="">
+                    <h2>William C Hein</h2>
+                    <h4>Founder Of CEO</h4>
+                    <div class="icon">
+                        <div class="fa fa-facebook-square"></div>
+                        <div class="fa fa-instagram"></div>
+                        <div class="fa fa-twitter-square"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="teamimg">
+                    <img src="member2.jfif" alt="">
+                    <h2>Agnes C Brewer</h2>
+                    <h4>Dog Walker</h4>
+                    <div class="icon">
+                        <div class="fa fa-facebook-square"></div>
+                        <div class="fa fa-instagram"></div>
+                        <div class="fa fa-twitter-square"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="teamimg">
+                    <img src="member4.jpg" alt="">
+                    <h2>Lorie J yates</h2>
+                    <h4>Pet Sitter</h4>
+
+                    <div class="icon">
+                        <div class="fa fa-facebook-square"></div>
+                        <div class="fa fa-instagram"></div>
+                        <div class="fa fa-twitter-square"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="teamimg">
+                    <img src="member5.jpg" alt="">
+                    <h2>Floy R Davis</h2>
+                    <h4>Pet Sitter</h4>
+                    <div class="icon">
+                        <div class="fa fa-facebook-square"></div>
+                        <div class="fa fa-instagram"></div>
+                        <div class="fa fa-twitter-square"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+    <section id="Reviews">
+        <div class="main2">
+            <div class="main-center2">
+                <img src="check-image.png" alt="">
+            </div>
+            <div class="main-para2">
+                <h3>Check in Time</h3>
+                <h1>We Keep Happy Them</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore, nam a, repellendus ipsam
+                    quam modi quas unde cum recusandae non fuga nihil error architecto quibusdam quos reiciendis magnam.
+                    Itaque!</p>
+
+                    <div class="class">
+                       
+                       <h1>9 AM to 9 PM</h1>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, quis?</p>
+                 
+                  <h1>Emergency</h1>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, quis?</p>
+                </div>
+            </div>
+
+        
+
+    </section>
+    <section id="Pricing">
+        <div class="heading">
+            <h3>Pricing Plan</h3>
+            <h1>Best Pricing plan</h1>
+
+        </div>
+        <div class="main-box">
+            <div class="planbox">
+                <div class="pricingimg">
+                    <img src="Basic.jpg"style="width=200px" alt="">
+                    <h2>Basic /<span> $109</span></h2>
+                   
+                    
+                    <div class="circle">
+                        <div class="fa fa-check-circle"><span>Pet Shower</span></div><br>
+                        <div class="fa fa-check-circle"><span>Health Check Up</span></div><br>
+                        <div class="fa fa-check-circle"><span>Pet Grooming</span></div><br>
+                        <div class="fa fa-close"><span>Spa And Grooming</span></div><br>
+                        <div class="fa fa-close"><span>Spa And Hair And Nail</span></div><br>
+                        <div class="fa fa-close"><span>Brush & Blow Dry</span></div><br>
+                        <a href="#" class="btn_circle">Book Now</a>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="planbox">
+                <div class="pricingimg">
+                    <img src="standard.jpg" alt="">
+                    <h2>Standard / <span> $189</span></h2>
+                   
+                    
+                    <div class="circle">
+                        <div class="fa fa-check-circle"><span>Pet Shower</span></div><br>
+                        <div class="fa fa-check-circle"><span>Health Check Up</span></div><br>
+                        <div class="fa fa-check-circle"><span>Pet Grooming</span></div><br>
+                        <div class="fa fa-check-circle"><span>Spa And Grooming</span></div><br>
+                        <div class="fa fa-close"><span>Spa And Hair And Nail</span></div><br>
+                        <div class="fa fa-close"><span>Brush & Blow Dry</span></div><br>
+                        <a href="#" class="btn_circle_pink">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="planbox">
+                <div class="pricingimg">
+                    <img src="premium.png" alt="">
+                    <h2>Premium / <span> $529</span></h2>
+                    
+                   
+                    <div class="circle">
+                        <div class="fa fa-check-circle"><span>Pet Shower</span></div><br>
+                        <div class="fa fa-check-circle"><span>Health Check Up</span></div><br>
+                        <div class="fa fa-check-circle"><span>Pet Grooming</span></div><br>
+                        <div class="fa fa-check-circle"><span>Spa And Grooming</span></div><br>
+                        <div class="fa fa-check-circle"><span>Spa And Hair And Nail</span></div><br>
+                        <div class="fa fa-check-circle"><span>Brush & Blow Dry</span></div><br>
+                        <a href="#" class="btn_circle">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="contact" id="Contact">
+        <div class="f-contact">
+            <div>
+                <h3>About Us</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-linkedin" ></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-youtube"></i>
+            </div>
+            <div class="ex">
+                <h3>Explore</h3>
+                <div class="social">
+                    <div class="fa fa-link"><span>About Us</span></div>
+                    <div class="fa fa-link"><span>Services</span></div>
+                    <div class="fa fa-link"><span>Expert Team</span></div>
+                    <div class="fa fa-link"><span>Reviews</span></div>
+                </div>
+              
+            </div>
+            <div class="sup">
+                <h3>Support</h3>
+                <div class="social">
+                    <div class="fa fa-link"><span>Pet Shower</span></div>
+                    <div class="fa fa-link"><span>Health Checkup</span></div>
+                    <div class="fa fa-link"><span>Pet Grooming</span></div>
+                    <div class="fa fa-link"><span>Spa And Grooming</span></div>
+                    <div class="fa fa-link"><span>Brush & Blow Dry</span></div>
+                </div>
+            </div>
+            <div class="su">
+                <h3>Subscribe</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, laboriosam.</p>
+                <input class="in"type="Email" id="E-mail address" name="E-mail Address" placeholder="E-mail Address"><i class="fa fa-email"></i>
+               
+            </div>
+        </div>
+        <footer>Copyright &copy; 2021. All Rights Reserved !</footer>
+    </section>
+    <hr>
+    
+    <script>
+        let searchForm = document.querySelector('.search-form');
+
+document.querySelector('#search-btn').onclick = () =>{
+    searchForm.classList.toggle('active');
+    navbar.classList.remove('active');
+
+  
+}
+
+let navbar = document.querySelector('.navbar');
+document.querySelector('#menu-btn').onclick = () =>{
+    navbar.classList.toggle('active');
+   
+    searchForm.classList.remove('active');
+   
+}
+    </script>
+</body>
+
+</html>
